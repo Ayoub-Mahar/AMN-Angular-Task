@@ -1,0 +1,17 @@
+<br>
+<div class="login-form">
+    <form autocomplete="off" #myForm="ngForm" (ngSubmit)="myForm.form.valid && submit(myForm)">
+        <h2 class="text-center">Log in</h2>       
+        <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="email" #email="ngModel" [(ngModel)]="this.accountService.accountData.email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Password" #password="ngModel" [(ngModel)]="this.accountService.accountData.password" required="required">
+        </div>
+        <div class="form-group">
+            <!-- <button type="submit" class="btn btn-primary btn-block">Log in</button> -->
+            <button type="submit" class="btn btn-success btn-block">Login</button>
+        </div>
+    </form>
+    <p class="text-center"><a routerLink="/SignUp"> Create an Account</a></p>
+</div>

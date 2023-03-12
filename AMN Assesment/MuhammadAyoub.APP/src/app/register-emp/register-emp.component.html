@@ -1,0 +1,47 @@
+<div class="container">
+</div>
+<div class="formAddwwe">
+    <form autocomplete="off" #myForm="ngForm" (ngSubmit)="myForm.form.valid && submit(myForm)">
+        <div class="container">
+           <div class="row">
+                <div class="col-md-3">
+                    <label for="name" class="float-left">Name</label>
+                    <div *ngIf="name.invalid && (name.touched || name.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="text" name="name" class="form-control" placeholder="Enter Name" #name="ngModel" [(ngModel)]="empService.employeeData.name" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="email" class="float-left">Email</label>
+                    <div *ngIf="name.invalid && (name.touched || name.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email" #email="ngModel" [(ngModel)]="empService.employeeData.email" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="age" class="float-left">Age</label>
+                    <div *ngIf="name.invalid && (name.touched || name.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="text" name="age" class="form-control" placeholder="Enter Age" #age="ngModel" [(ngModel)]="empService.employeeData.age" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="dob" class="float-left">DOB</label>
+                    <div *ngIf="name.invalid && (name.touched || name.dirty)" class="float-right">
+                        <p class="text-danger">Required</p>
+                    </div>
+                    <input type="date" name="dob" class="form-control" placeholder="Enter Name" #dob="ngModel" [(ngModel)]="empService.employeeData.dob" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-8"></div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success btn-block">Save</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="reset" class="btn btn-danger btn-block">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

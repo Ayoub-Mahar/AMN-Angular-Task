@@ -1,0 +1,7 @@
+.bg-light {
+    background-color: rgb(0 123 255 / 25%)!important;
+}
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9)!important;
+    margin-left: 40%!important
+}
